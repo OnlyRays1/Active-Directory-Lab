@@ -1,56 +1,61 @@
-<h1>JWipe - Disk Sanitization</h1>
+<h1>Active Directory Home Lab</h1>
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
+This project demonstrates my ability to set up and manage an Active Directory (AD) environment using virtual machines. The lab consists of:<br/>
+
+<br>-Domain Controller (DC): Configured a VM to act as the primary DC, including installing and managing Active Directory Domain Services (AD DS).<br/>
+-Employee Computer: Created a second VM to simulate a client workstation within the domain.
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>PowerShell:For managing and scripting tasks within the Active Directory environment.</b> 
+- <b>Windows Server: For configuring and managing the Domain Controller (DC).</b>
+- <b>Active Directory Domain Services (AD DS): Core service used to manage users, computers, and policies in the domain.</b>
+- <b>VirtualBox: For creating and running virtual machines (VMs).</b>
+- <b>Windows 10: Used as the client operating system for the employee computer.</b>
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Windows 10</b>
+- <b>Windows Server 2019: Installed on the Domain Controller VM.</b>
+- <b>Local Network: Simulated network connection between the VMs for domain communication.</b>
+- <b>Active Directory Lab: Configured as a controlled environment to test domain functionalities.</b>
 
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Create DC VM: <br/>
+<img src="https://i.imgur.com/dZBwp14.png" height="80%" width="80%" alt="Create DC VM"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Install Active Directory Domain Services:  <br/>
+<img src="https://i.imgur.com/9SIIf4U.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Create Admin OU and User: <br/>
+<img src="https://i.imgur.com/u08AzMt.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Configure NAT:  <br/>
+<img src="https://i.imgur.com/rXPoboq.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Configure DHCP scope:  <br/>
+<img src="https://i.imgur.com/pE6TpLM.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Creating and Managing Domain Resources (I utilized a script to create a majority of users):  <br/>
+<img src="https://i.imgur.com/OnrnYnI.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Verify Funcionality from User VM:  <br/>
+<img src="https://i.imgur.com/qvubmUN.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
+Verify DHCP lease from User PC on DC:  <br/>
+<img src="https://i.imgur.com/zkbJWyz.png" height="80%" width="80%" alt="Active Directory"/>
 </p>
 
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+
